@@ -1,0 +1,70 @@
+.candid-detail {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 70vh;
+  background: rgba(255, 255, 255, 0.459);
+  border-radius: 20px;
+}
+
+.candid-left {
+  flex: 0.4;
+  overflow: hidden;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.candid-right {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0.5;
+  align-items: center;
+}
+
+.candid-right button {
+  margin: 15px 10px;
+  font-size: 1.2rem;
+  border: 2px solid rgb(255, 50, 50);
+  background: none;
+  outline: none;
+  border-radius: 999px;
+  padding: 5px 15px;
+  color: rgb(255, 50, 50);
+  transition: all 0.3s;
+}
+
+.candid-right button:hover {
+  color: white;
+  background: rgb(255, 50, 50);
+}
+
+.candid-right .accept-button {
+  color: rgb(6, 128, 33);
+  border: 2px solid rgb(6, 128, 33);
+}
+
+.candid-right .accept-button:hover {
+  background: rgb(6, 128, 33);
+}
+
+.candid-detail img {
+  max-width: 300px;
+  min-width: 200px;
+  width: 100%;
+  border-radius: 0;
+  display: block;
+  border: 3px solid white;
+  box-shadow: 0 0 10px black;
+  margin: 10px;
+}
+
+@media (max-width: 990px) {
+  .candid-detail {
+    flex-direction: column;
+    width: 100%;
+  }
+}
