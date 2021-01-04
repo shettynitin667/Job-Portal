@@ -12,6 +12,9 @@ const accepted = (state = [], action) => {
     let newList = action.payload.state.filter(
       (e) => e.id === action.payload.userId
     )[0];
+    for (let i = 0; i < state.length; i++) {
+      if (state[i].id === newList.id) return [...state];
+    }
     return [...state, newList];
   } else if (action.type === "REJECT") {
     let newList = state.filter((e) => e.id !== action.payload.userId);
@@ -24,6 +27,9 @@ const rejected = (state = [], action) => {
     let newList = action.payload.state.filter(
       (e) => e.id === action.payload.userId
     )[0];
+    for (let i = 0; i < state.length; i++) {
+      if (state[i].id === newList.id) return [...state];
+    }
     return [...state, newList];
   } else if (action.type === "ACCEPT") {
     let newList = state.filter((e) => e.id !== action.payload.userId);
